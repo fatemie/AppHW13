@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.profile"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/textViewStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_margin="12dp"
+        android:text="@string/startString"
+        android:textSize="20sp"
+        android:background="@color/green"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="305dp" />
+
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/nameString"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <EditText
+        android:id="@+id/editTextFatherPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/fatherName"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <EditText
+        android:id="@+id/editTextPostalCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/postalCode"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/phoneNumber"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <EditText
+        android:id="@+id/editTextAccountCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/accountCount"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:backgroundTint="@color/pink"
+        android:textAllCaps="false"
+        app:cornerRadius="100dp"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="431dp"
+        android:layout_marginTop="50dp"/>
+
+
+</LinearLayout>

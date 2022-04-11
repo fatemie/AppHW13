@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_account_box_24"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/createAccount"
+        android:icon="@drawable/ic_baseline_add_card_24"
+        android:title="@string/create_accounts" />
+    <item
+        android:id="@+id/showAccounts"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:title="@string/show_accounts" />
+    <item
+        android:id="@+id/selectAccount"
+        android:icon="@drawable/ic_baseline_airplay_24"
+        android:title="@string/select_account" />
+
+    <item
+        android:id="@+id/deleteAll"
+        android:icon="@drawable/ic_baseline_delete_sweep_24"
+        android:title="@string/delete_all" />
+
+</menu>

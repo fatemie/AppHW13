@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AppHW13</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="startString">فرم ثبت اطلاعات</string>
+    <string name="nameString">نام و نام خانوادگی</string>
+    <string name="profile">Profile</string>
+    <string name="create_accounts">Create accounts</string>
+    <string name="show_accounts">Show accounts</string>
+    <string name="select_account">Select account</string>
+    <string name="delete_all">Delete all</string>
+    <string name="postalCode">کد پستی</string>
+    <string name="phoneNumber">شماره تلفن</string>
+    <string name="accountCount">تعداد حساب ها</string>
+    <string name="fatherName">نام پدر</string>
+    <string name="register">ثبت اطلاعات</string>
+    <string name="showProfileString">مشاهده ی اطلاعات پروفایل</string>
+    <string name="edit">ویرایش اطلاعات</string>
+</resources>

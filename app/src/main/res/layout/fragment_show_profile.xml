@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.ShowProfile"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewStartShowInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/showProfileString"
+        android:background="@color/green"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nameString"
+        android:background="@color/gray"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/textViewFatherName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fatherName"
+        android:background="@color/gray"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/textViewPostalCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/postalCode"
+        android:background="@color/gray"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phoneNumber"
+        android:background="@color/gray"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/textViewAccountCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accountCount"
+        android:background="@color/gray"
+        android:textSize="20sp"
+        android:layout_margin="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:backgroundTint="@color/pink"
+        android:textAllCaps="false"
+        app:cornerRadius="100dp"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="431dp"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>
