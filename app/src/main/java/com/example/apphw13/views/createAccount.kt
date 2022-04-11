@@ -18,6 +18,11 @@ import com.example.apphw13.viewModels.CreateAccountViewModel
 class createAccount : Fragment() {
     private val vModel : CreateAccountViewModel by activityViewModels()
     lateinit var binding : FragmentCreateAccountBinding
+    lateinit var firstSpinnerItem : String
+    lateinit var secondSpinnerItem : String
+    lateinit var thirdSpinnerItem : String
+    lateinit var fourthSpinnerItem : String
+    lateinit var fifthSpinnerItem : String
     val cardList = arrayListOf<CardView>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,18 +41,7 @@ class createAccount : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViews()
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.accountType_array,
-            android.R.layout.simple_spinner_dropdown_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            binding.spinner1.adapter = adapter
-            binding.spinner2.adapter = adapter
-            binding.spinner3.adapter = adapter
-            binding.spinner4.adapter = adapter
-            binding.spinner5.adapter = adapter
-        }
+        setSpinner()
 
     }
 
@@ -64,6 +58,70 @@ class createAccount : Fragment() {
             cardList[i].isVisible = true
         }
 
+    }
+
+    fun setSpinner(){
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.accountType_array,
+            android.R.layout.simple_spinner_dropdown_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            binding.spinner1.adapter = adapter
+            binding.spinner2.adapter = adapter
+            binding.spinner3.adapter = adapter
+            binding.spinner4.adapter = adapter
+            binding.spinner5.adapter = adapter
+        }
+        binding.spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                firstSpinnerItem=p0?.getItemAtPosition(p2).toString()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                secondSpinnerItem=p0?.getItemAtPosition(p2).toString()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                thirdSpinnerItem=p0?.getItemAtPosition(p2).toString()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                fourthSpinnerItem=p0?.getItemAtPosition(p2).toString()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner5.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                fifthSpinnerItem=p0?.getItemAtPosition(p2).toString()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
     }
 
 }

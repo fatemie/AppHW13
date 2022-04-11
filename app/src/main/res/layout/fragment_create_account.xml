@@ -30,18 +30,27 @@
             android:orientation="vertical"
             android:layout_margin="20dp">
 
-        <EditText
-            android:id="@+id/typeAccount1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="نوع حساب"
-            android:inputType="text"
-            android:layout_marginTop="20dp"/>
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="end">
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/typeAccount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نوع حساب"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
         <EditText
             android:id="@+id/accountNumber1"
             android:layout_marginTop="10dp"
@@ -77,18 +86,25 @@
                 android:orientation="vertical"
                 android:layout_margin="20dp">
 
-                <EditText
-                    android:id="@+id/typeAccount2"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="نوع حساب"
-                    android:inputType="text"
-                    android:layout_marginTop="20dp"/>
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/typeAccount2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نوع حساب"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/accountNumber2"
                     android:layout_marginTop="10dp"
@@ -124,18 +140,25 @@
                 android:orientation="vertical"
                 android:layout_margin="20dp">
 
-                <EditText
-                    android:id="@+id/typeAccount3"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="نوع حساب"
-                    android:inputType="text"
-                    android:layout_marginTop="20dp"/>
-                <Spinner
-                    android:id="@+id/spinner3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/typeAccount3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نوع حساب"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/accountNumber3"
                     android:layout_marginTop="10dp"
@@ -171,18 +194,25 @@
                 android:orientation="vertical"
                 android:layout_margin="20dp">
 
-                <EditText
-                    android:id="@+id/typeAccount4"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="نوع حساب"
-                    android:inputType="text"
-                    android:layout_marginTop="20dp"/>
-                <Spinner
-                    android:id="@+id/spinner4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <Spinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/typeAccount4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نوع حساب"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/accountNumber4"
                     android:layout_marginTop="10dp"
@@ -218,18 +248,25 @@
                 android:orientation="vertical"
                 android:layout_margin="20dp">
 
-                <EditText
-                    android:id="@+id/typeAccount5"
+                <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="نوع حساب"
-                    android:inputType="text"
-                    android:layout_marginTop="20dp"/>
-                <Spinner
-                    android:id="@+id/spinner5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <Spinner
+                        android:id="@+id/spinner5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/typeAccount5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نوع حساب"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/accountNumber5"
                     android:layout_marginTop="10dp"
