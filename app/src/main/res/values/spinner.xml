@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="accountType_array">
+        <item>قرض الحسنه</item>
+        <item>جاری</item>
+        <item>کوتاه مدت</item>
+        <item>بلند مدت</item>
+    </string-array>
+</resources>

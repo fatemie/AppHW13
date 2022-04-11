@@ -110,14 +110,21 @@ class profile : Fragment() {
     fun checkInfoIsCorrect() :Boolean{
         val post = binding.editTextPostalCode.text
         val phone = binding.editTextPhoneNumber.text
+        val accountCount = binding.editTextAccountCount.text
+        val intAccountCount = Integer.parseInt(accountCount.toString())
         if(post.length != 10){
             binding.editTextPostalCode.setError("کد پستی باید 10 رقم داشته باشد")
             return false
         }
-        if(phone.length != 11 && phone.get(0) != '0'){
+        if (phone.length != 11 && phone.get(0) != '0'){
             binding.editTextPhoneNumber.setError("شماره تلفن صحیح وارد نشده است!")
             return false
         }
+        if(intAccountCount > 5){
+            binding.editTextAccountCount.setError("حداکثر 5 کارت می توانید وارد کنید!")
+            return false
+        }
+
         return true
     }
 

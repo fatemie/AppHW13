@@ -1,39 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.CreateAccount"
-    android:orientation="vertical">
+    tools:context=".views.createAccount">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/firstCard"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:layout_weight="1"
+            android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/card" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/typeAccount1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نوع حساب"
+            android:inputType="text"
+            android:layout_marginTop="20dp"/>
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/accountNumber1"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="شماره حساب"
+            android:inputType="number"/>
+            <EditText
+                android:id="@+id/balance1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="موجودی"
+                android:inputType="number"/>
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/secondCard"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:layout_weight="1"
+            android:visibility="gone">
 
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/card" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/typeAccount2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نوع حساب"
+                    android:inputType="text"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/accountNumber2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="شماره حساب"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/balance2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="موجودی"
+                    android:inputType="number"/>
+            </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thirdCard"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:layout_weight="1"
+            android:visibility="gone">
 
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/card" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/typeAccount3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نوع حساب"
+                    android:inputType="text"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/accountNumber3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="شماره حساب"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/balance3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="موجودی"
+                    android:inputType="number"/>
+            </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fourthCard"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/card" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/typeAccount4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نوع حساب"
+                    android:inputType="text"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/accountNumber4"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="شماره حساب"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/balance4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="موجودی"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fifthCard"
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/card" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/typeAccount5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نوع حساب"
+                    android:inputType="text"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/accountNumber5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="شماره حساب"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/balance5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="موجودی"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
