@@ -29,4 +29,9 @@
         android:name="com.example.apphw13.views.createAccount"
         android:label="fragment_create_account"
         tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/showAccount"
+        android:name="com.example.apphw13.views.showAccount"
+        android:label="fragment_show_account"
+        tools:layout="@layout/fragment_show_account" />
 </navigation>

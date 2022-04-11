@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import com.example.apphw13.R
 import com.example.apphw13.databinding.FragmentCreateAccountBinding
+import com.example.apphw13.models.Account
+import com.example.apphw13.repository.AccountRepositpry
 import com.example.apphw13.viewModels.CreateAccountViewModel
 
 class createAccount : Fragment() {
@@ -40,9 +43,16 @@ class createAccount : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.let { AccountRepositpry.initDB(it.applicationContext) }
         initViews()
         setSpinner()
+        setListener()
+    }
 
+    private fun setListener() {
+        binding.buttonRegister.setOnClickListener {
+            saveInfo()
+        }
     }
 
     private fun initViews() {
@@ -122,6 +132,36 @@ class createAccount : Fragment() {
                 TODO("Not yet implemented")
             }
         }
+    }
+
+    private fun saveInfo() {
+        val accountNumber1 = binding.accountNumber1.text.toString()
+        val accountBalance1 = binding.balance1.text.toString()
+        val account1 = Account(1, firstSpinnerItem, accountNumber1, accountBalance1)
+        AccountRepositpry.insertAccount(account1)
+
+        val accountNumber2 = binding.accountNumber2.text.toString()
+        val accountBalance2 = binding.balance2.text.toString()
+        val account2 = Account(2, secondSpinnerItem, accountNumber2, accountBalance2)
+        AccountRepositpry.insertAccount(account2)
+
+        val accountNumber3 = binding.accountNumber3.text.toString()
+        val accountBalance3 = binding.balance3.text.toString()
+        val account3 = Account(3, thirdSpinnerItem, accountNumber3, accountBalance3)
+        AccountRepositpry.insertAccount(account3)
+
+        val accountNumber4 = binding.accountNumber4.text.toString()
+        val accountBalance4 = binding.balance4.text.toString()
+        val account4 = Account(4, fourthSpinnerItem, accountNumber4, accountBalance4)
+        AccountRepositpry.insertAccount(account4)
+
+        val accountNumber5 = binding.accountNumber5.text.toString()
+        val accountBalance5 = binding.balance5.text.toString()
+        val account5 = Account(5, fifthSpinnerItem, accountNumber5, accountBalance5)
+        AccountRepositpry.insertAccount(account5)
+
+        Toast.makeText(activity, "اطلاعات با موفقیت ذخیره شد!" , Toast.LENGTH_SHORT ).show()
+
     }
 
 }

@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_baseline_add_card_24"
         android:title="@string/create_accounts" />
     <item
-        android:id="@+id/showAccounts"
+        android:id="@+id/showAccount"
         android:icon="@drawable/ic_baseline_account_balance_wallet_24"
         android:title="@string/show_accounts" />
     <item

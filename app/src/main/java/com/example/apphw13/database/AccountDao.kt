@@ -10,11 +10,14 @@ import com.example.apphw13.models.Account
 interface AccountDao {
 
     @Query("SELECT * FROM Account")
-    fun getAllDoctor():List<Account>
+    fun getAllAccount():List<Account>
 
     @Query("SELECT * FROM Account WHERE id IN (:accountId)")
-    fun getDoctor(accountId:Int): Account
+    fun getAccount(accountId:Int): Account
 
     @Insert
-    fun insertAll(vararg doctor: Account)
+    fun insertAll(vararg account: Account)
+
+    @Query("DELETE FROM Account")
+    fun deleteAll()
 }
