@@ -4,4 +4,4 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Account(@PrimaryKey val id : Int, val type : String, val number : String, val balance : String)
+data class Account(@PrimaryKey(autoGenerate = true) val id : Int, val type : String, val number : String, val balance : String)

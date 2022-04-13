@@ -13,11 +13,12 @@
         android:icon="@drawable/ic_baseline_account_balance_wallet_24"
         android:title="@string/show_accounts" />
     <item
-        android:id="@+id/selectAccount"
+        android:id="@+id/selectAccount2"
         android:icon="@drawable/ic_baseline_airplay_24"
         android:title="@string/select_account" />
 
     <item
+        android:onClick="onNavigationItemSelected"
         android:id="@+id/deleteAll"
         android:icon="@drawable/ic_baseline_delete_sweep_24"
         android:title="@string/delete_all" />

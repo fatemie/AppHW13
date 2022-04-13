@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.showAccount"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.selectAccount"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -45,32 +45,26 @@
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/numberEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20sp">
+        android:hint="شماره کارت مدنظر را وارد کنید"
+        android:layout_marginTop="50sp"
+        android:inputType="text"
+        android:layout_margin="20sp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="جستجو"
+        android:backgroundTint="@color/pink"
+        android:textAllCaps="false"
+        app:cornerRadius="100dp"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="431dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20sp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="back"
-            android:textColor="@color/black"
-            app:icon="@drawable/ic_baseline_arrow_back_ios_24"
-            app:iconTint="#000000" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/nextBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="next"
-            android:textColor="@color/black"
-            app:icon="@drawable/ic_baseline_arrow_forward_ios_24"
-            app:iconGravity="end"
-            app:iconTint="#000000" />
-    </LinearLayout>
 
 </LinearLayout>

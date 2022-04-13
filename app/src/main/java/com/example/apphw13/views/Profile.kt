@@ -25,7 +25,6 @@ class profile : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         profileIsCreated()
-
     }
 
     override fun onCreateView(
@@ -60,9 +59,11 @@ class profile : Fragment() {
             editor.putString(PHONENUMBER, binding.editTextPhoneNumber.text.toString())
             editor.putString(POSTALCODE, binding.editTextPostalCode.text.toString())
             editor.putString(ACCOUNTCOUNT, binding.editTextAccountCount.text.toString())
+            editor.putBoolean(EDIT, false)
             editor.apply()
-            //Toast.makeText(activity, "information saved!" , Toast.LENGTH_SHORT ).show()
+            Toast.makeText(activity, "information saved!" , Toast.LENGTH_SHORT ).show()
             goToShowProfile()
+
         }
     }
 
@@ -94,37 +95,50 @@ class profile : Fragment() {
             AppCompatActivity.MODE_PRIVATE
         )
 
-        val edit = prefs.getBoolean(EDIT,false)
-        val name = prefs.getString(NAME,"")
-        if(name.isNullOrEmpty()){
-            goToShowProfile()
-        }else if (!edit){
-            goToShowProfile()
-        }else{
-            val editor =  prefs.edit()
-            editor.putBoolean(EDIT,false)
-            editor.apply()
-        }
+        val edit = prefs.getBoolean(EDIT,true)
+       // val name = prefs.getString(NAME,"")
+//        if(!name.isNullOrEmpty()){
+//            goToShowProfile()
+//        }
+//else
+        if (!edit){
+            goToShowProfile()}
     }
 
     fun checkInfoIsCorrect() :Boolean{
         val post = binding.editTextPostalCode.text
         val phone = binding.editTextPhoneNumber.text
         val accountCount = binding.editTextAccountCount.text
-        val intAccountCount = Integer.parseInt(accountCount.toString())
-        if(post.length != 10){
+        if(post.length != 10) {
             binding.editTextPostalCode.setError("کد پستی باید 10 رقم داشته باشد")
             return false
         }
-        if (phone.length != 11 && phone.get(0) != '0'){
-            binding.editTextPhoneNumber.setError("شماره تلفن صحیح وارد نشده است!")
-            return false
-        }
-        if(intAccountCount > 5){
-            binding.editTextAccountCount.setError("حداکثر 5 کارت می توانید وارد کنید!")
-            return false
+        if (!phone.isNullOrEmpty()){
+            if (phone.length != 11 && phone.get(0) != '0'){
+                binding.editTextPhoneNumber.setError("شماره تلفن صحیح وارد نشده است!")
+                return false
+            }
         }
 
+
+        if(!accountCount.isNullOrEmpty()){
+            val intAccountCount = Integer.parseInt(accountCount.toString())
+            if(intAccountCount > 5){
+                binding.editTextAccountCount.setError("حداکثر 5 کارت می توانید وارد کنید!")
+                return false
+            }
+        }else{
+            binding.editTextAccountCount.setError("این قست را تکمیل کنید")
+        }
+
+        if(binding.editTextPersonName.text.isNullOrEmpty()){
+            binding.editTextPersonName.setError("این قسمت را تکمیل کنید")
+            return false
+        }
+        if (binding.editTextFatherPersonName.text.isNullOrEmpty()){
+            binding.editTextFatherPersonName.setError("این قسمت را تکمیل کنید!")
+            return false
+        }
         return true
     }
 

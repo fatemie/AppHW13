@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/profile"
         android:name="com.example.apphw13.views.profile"
-        android:label="fragment_profile"
+        android:label="profile"
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profile_to_showProfile"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/showProfile"
         android:name="com.example.apphw13.views.ShowProfile"
-        android:label="fragment_show_profile"
+        android:label="show profile"
         tools:layout="@layout/fragment_show_profile" >
         <action
             android:id="@+id/action_showProfile_to_profile"
@@ -27,11 +27,16 @@
     <fragment
         android:id="@+id/createAccount2"
         android:name="com.example.apphw13.views.createAccount"
-        android:label="fragment_create_account"
+        android:label="create account"
         tools:layout="@layout/fragment_create_account" />
     <fragment
         android:id="@+id/showAccount"
         android:name="com.example.apphw13.views.showAccount"
-        android:label="fragment_show_account"
+        android:label="show accounts"
         tools:layout="@layout/fragment_show_account" />
+    <fragment
+        android:id="@+id/selectAccount2"
+        android:name="com.example.apphw13.views.selectAccount"
+        android:label="select account"
+        tools:layout="@layout/fragment_select_account" />
 </navigation>
